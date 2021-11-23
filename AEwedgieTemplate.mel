@@ -1,0 +1,38 @@
+global proc AEwedgieTemplate( string $nodeName )
+{
+    editorTemplate -beginScrollLayout;
+
+    editorTemplate -addControl "wedge_index";
+
+    editorTemplate -beginLayout ("Wedge 1 Attributes") -collapse 0;
+        editorTemplate -addControl "wedge_attr1";
+        editorTemplate -addControl "wedge_start1";
+        editorTemplate -addControl "wedge_step1";
+        editorTemplate -addControl "wedge_num_steps1";
+        editorTemplate -addControl "wedge_stepdir1";
+        editorTemplate -addControl "wedge_value1";
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout ("Wedge 2 Attributes") -collapse 0;
+        editorTemplate -addControl "wedge_attr2";
+        editorTemplate -addControl "wedge_start2";
+        editorTemplate -addControl "wedge_step2";
+        editorTemplate -addControl "wedge_num_steps2";
+        editorTemplate -addControl "wedge_stepdir2";
+        editorTemplate -addControl "wedge_value2";
+    editorTemplate -endLayout;
+
+    editorTemplate -beginLayout ("Wedge 3 Attributes") -collapse 0;
+        editorTemplate -addControl "wedge_attr3";
+        editorTemplate -addControl "wedge_start3";
+        editorTemplate -addControl "wedge_step3";
+        editorTemplate -addControl "wedge_num_steps3";
+        editorTemplate -addControl "wedge_stepdir3";
+        editorTemplate -addControl "wedge_value3";
+    editorTemplate -endLayout;
+
+    AEdependNodeTemplate $nodeName;
+
+    editorTemplate -addExtraControls;
+    editorTemplate -endScrollLayout;
+}
